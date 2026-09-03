@@ -1,8 +1,9 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
-import { emptySession, heuristicTurn } from "../api/agent.ts";
-import { shopifyEnv } from "../api/shopify-cart.ts";
-import { searchEnv, searchProducts } from "../api/suggestapi.ts";
+import { emptySession, heuristicTurn } from "../storefront/api/agent.ts";
+import { shopifyEnv } from "../storefront/api/shopify-cart.ts";
+import { searchEnv, searchProducts } from "../storefront/api/suggestapi.ts";
+
 const catalog = searchEnv().catalog;
 
 const gqlCart = {
@@ -47,7 +48,10 @@ test("live SuggestAPI client sends only x-api-key and maps suggestions", async (
   const seen: RequestInit[] = [];
   const fetch = async (url: string | URL, init?: RequestInit) => {
     seen.push(init ?? {});
-    assert.equal(String(url), "https://api.suggestapi.com/v1/autocomplete?index=ecommerce&query=hoodie&limit=8&mode=hybrid");
+    assert.equal(
+      String(url),
+      "https://api.suggestapi.com/v1/autocomplete?index=ecommerce&query=hoodie&limit=8&mode=hybrid",
+    );
     return new Response(
       JSON.stringify({
         query: "hoodie",

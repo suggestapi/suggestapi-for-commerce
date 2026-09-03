@@ -20,14 +20,13 @@ Node 20+.
 ```bash
 npm install
 cp .env.example .env
+npm test
 npm start
 ```
 
-Open http://localhost:3000
+`npm test` is fixture replay: SuggestAPI-shaped catalog, mocked Shopify cart, no network, no LLM key. GitHub Actions runs the same command on every push.
 
-```bash
-npm test    # recorded catalog + mocked Storefront cart, no network, no LLM key
-```
+Open http://localhost:3005
 
 ## Try
 
@@ -63,9 +62,9 @@ npm run record
 
 ## Layout
 
+- `tests/` — shopper + HTTP fixture tests (`npm test`)
 - `storefront/api/` — SuggestAPI client, Shopify cart adapter, shopper, HTTP host
 - `storefront/web/` — product grid, chat, cart, checkout button
 - `storefront/data/` — recorded guest catalog
-- `storefront/tests/` — fixture replay
 
 Apache-2.0. See [NOTICE](NOTICE).

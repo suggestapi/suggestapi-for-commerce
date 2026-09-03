@@ -9,7 +9,7 @@
   },
   "scripts": {
     "start": "tsx storefront/api/server.ts",
-    "test": "tsx --test storefront/tests/*.test.ts",
+    "test": "tsx --test tests/*.test.ts",
     "record": "tsx storefront/scripts/record-fixtures.ts"
   },
   "devDependencies": {
