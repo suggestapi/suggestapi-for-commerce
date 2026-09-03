@@ -1,7 +1,7 @@
 {
   "recorded_at": "2026-09-03T00:00:00.000Z",
   "source": "https://mock.shop/api",
-  "note": "Guest catalog in SuggestAPI suggestion shape. Live SUGGESTAPI_PUBLIC_KEY bypasses this file.",
+  "note": "Local SuggestAPI-shaped catalog. Guest search reads this file; it does not fetch mock.shop. Variant ids are for the Shopify cart handoff only.",
   "catalog": [
     {
       "id": "slides",

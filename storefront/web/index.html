@@ -3,51 +3,68 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
     <title>SuggestAPI shopper</title>
-    <link rel="stylesheet" href="/styles.css" />
+    <link rel="icon" type="image/png" href="/brand/favicon-96.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css?v=2" />
   </head>
   <body>
-    <header>
-      <div>
-        <p class="eyebrow">SuggestAPI for Commerce</p>
-        <h1>Shopper agent</h1>
-      </div>
-      <p class="lede">
-        SuggestAPI is retrieval. Shopify Storefront is the cart. Checkout stays on the store.
-      </p>
+    <header class="top">
+      <a class="brand" href="/" title="SuggestAPI">
+        <img
+          class="wordmark"
+          src="/brand/wordmark-white.png"
+          alt="SuggestAPI"
+        />
+      </a>
+      <p class="tag">Search stays on SuggestAPI. Checkout stays on Shopify.</p>
     </header>
     <main>
-      <section class="chat" aria-label="Shopper">
+      <section class="catalog" aria-label="Catalog">
+        <div class="section-head">
+          <h1>Catalog</h1>
+          <p id="meta" class="muted">Ask the shopper to search.</p>
+        </div>
+        <ul id="grid"></ul>
+      </section>
+      <aside class="desk" aria-label="Shopper">
+        <div class="section-head">
+          <h2>Shopper</h2>
+          <button type="button" id="clear" class="clear">Clear chat</button>
+        </div>
         <ol id="log"></ol>
-        <form id="form">
-          <input
-            id="input"
-            name="message"
-            autocomplete="off"
-            placeholder="I need a hoodie under $100"
-          />
-          <button type="submit">Send</button>
-        </form>
-        <p class="hints">
-          Try: <button type="button" data-q="I need a hoodie under $100">hoodie under $100</button>
-          <button type="button" data-q="Show only cotton">Show only cotton</button>
-          <button type="button" data-q="Add the second one">Add the second one</button>
-        </p>
-      </section>
-      <section class="rail">
-        <div>
-          <h2>Results</h2>
-          <p id="meta" class="muted"></p>
-          <ul id="grid"></ul>
-        </div>
-        <div>
-          <h2>Cart</h2>
+        <section class="bag" aria-label="Cart">
+          <div class="section-head">
+            <h2>Cart</h2>
+            <p id="cart-count" class="muted">Empty</p>
+          </div>
           <ul id="cart"></ul>
-          <a id="checkout" class="checkout" hidden href="#" target="_blank" rel="noreferrer">
-            Checkout on Shopify
-          </a>
-        </div>
-      </section>
+          <p id="cart-empty" class="bag-empty">Add a product from the catalog to build a Shopify cart.</p>
+          <a id="checkout" class="checkout" hidden href="#" target="_blank" rel="noreferrer">Checkout on Shopify</a>
+        </section>
+        <form id="form">
+          <div class="chips">
+            <button type="button" data-q="I need a hoodie under $100">hoodie under $100</button>
+            <button type="button" data-q="Show only cotton">show only cotton</button>
+            <button type="button" data-q="Add the second one">add the second one</button>
+          </div>
+          <div class="composer">
+            <input
+              id="input"
+              name="message"
+              autocomplete="off"
+              placeholder="What are you looking for?"
+            />
+            <button type="submit">Send</button>
+          </div>
+        </form>
+      </aside>
     </main>
     <script src="/app.js"></script>
   </body>

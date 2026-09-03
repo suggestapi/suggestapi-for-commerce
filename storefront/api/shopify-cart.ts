@@ -33,6 +33,13 @@ const ADD = `mutation cartLinesAdd($cartId: ID!, $lines: [CartLineInput!]!) {
   }
 }`;
 
+const REMOVE = `mutation cartLinesRemove($cartId: ID!, $lineIds: [ID!]!) {
+  cartLinesRemove(cartId: $cartId, lineIds: $lineIds) {
+    cart { ${CART_FIELDS} }
+    userErrors { field message }
+  }
+}`;
+
 export type ShopifyEnv = {
   graphqlUrl: string;
   token: string;
@@ -62,20 +69,37 @@ type GqlCart = {
 };
 
 function asCart(c: GqlCart): Cart {
+  const lines = c.lines.nodes.map((line) => ({
+    id: line.id,
+    quantity: line.quantity,
+    variant_id: line.merchandise.id,
+    title: line.merchandise.product?.title
+      ? `${line.merchandise.product.title} (${line.merchandise.title ?? ""})`.trim()
+      : line.merchandise.id,
+  }));
   return {
     id: c.id,
-    checkout_url: c.checkoutUrl,
+    checkout_url: storefrontHandoffUrl(c.checkoutUrl, lines),
     currency: c.cost.totalAmount.currencyCode,
     total: c.cost.totalAmount.amount,
-    lines: c.lines.nodes.map((line) => ({
-      id: line.id,
-      quantity: line.quantity,
-      variant_id: line.merchandise.id,
-      title: line.merchandise.product?.title
-        ? `${line.merchandise.product.title} (${line.merchandise.title ?? ""})`.trim()
-        : line.merchandise.id,
-    })),
+    lines,
   };
+}
+
+/** mock.shop returns https://demostore.mock.shop/checkout with no cart token. Permalinks load lines. */
+export function storefrontHandoffUrl(apiCheckoutUrl: string, lines: Cart["lines"]): string {
+  if (/\/cart\/c\//.test(apiCheckoutUrl)) return apiCheckoutUrl;
+  let origin: string;
+  try {
+    origin = new URL(apiCheckoutUrl).origin;
+  } catch {
+    return apiCheckoutUrl;
+  }
+  const parts = lines.flatMap((l) => {
+    const id = l.variant_id.match(/ProductVariant\/(\d+)/)?.[1];
+    return id ? [`${id}:${l.quantity}`] : [];
+  });
+  return parts.length ? `${origin}/cart/${parts.join(",")}` : apiCheckoutUrl;
 }
 
 async function shopifyGraphql(
@@ -125,4 +149,17 @@ export async function addVariantToCart(
   })) as { cartLinesAdd: { cart: GqlCart; userErrors?: { message: string }[] } };
   userErrors(data.cartLinesAdd);
   return asCart(data.cartLinesAdd.cart);
+}
+
+export async function removeLineFromCart(
+  lineId: string,
+  cartId: string,
+  env: ShopifyEnv = shopifyEnv(),
+): Promise<Cart> {
+  const data = (await shopifyGraphql(env, REMOVE, {
+    cartId,
+    lineIds: [lineId],
+  })) as { cartLinesRemove: { cart: GqlCart; userErrors?: { message: string }[] } };
+  userErrors(data.cartLinesRemove);
+  return asCart(data.cartLinesRemove.cart);
 }

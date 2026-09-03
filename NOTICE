@@ -1,10 +1,10 @@
 SuggestAPI for Commerce
 Copyright 2026 SuggestAPI
 
-This repository is an example storefront shopper. Product images and the
-guest catalog are recorded from Shopify's public mock.shop Storefront API
-(https://mock.shop/). Shopify, mock.shop, and related marks are trademarks
-of Shopify Inc. This project is not affiliated with Shopify.
+This repository includes official SuggestAPI brand files from
+https://www.suggestapi.com/brand/ (favicon and white wordmark).
+Shopify, mock.shop, and related marks are trademarks of Shopify Inc. This
+project is not affiliated with Shopify.
 
 Skills for integrating SuggestAPI live in https://github.com/suggestapi/skills
 and are not vendored here.

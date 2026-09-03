@@ -44,3 +44,15 @@ test("POST /api/chat returns fixture products without an LLM key", async () => {
     await close();
   }
 });
+
+test("GET /api/session starts with no products", async () => {
+  const { url, close } = await listen();
+  try {
+    const res = await fetch(`${url}/api/session?sessionId=browse`);
+    assert.equal(res.status, 200);
+    const body = (await res.json()) as { products: unknown[] };
+    assert.equal(body.products.length, 0);
+  } finally {
+    await close();
+  }
+});

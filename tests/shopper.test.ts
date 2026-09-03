@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
-import { emptySession, heuristicTurn } from "../storefront/api/agent.ts";
-import { shopifyEnv } from "../storefront/api/shopify-cart.ts";
+import { emptySession, heuristicTurn, runRemove } from "../storefront/api/agent.ts";
+import { shopifyEnv, storefrontHandoffUrl } from "../storefront/api/shopify-cart.ts";
 import { searchEnv, searchProducts } from "../storefront/api/suggestapi.ts";
 
 const catalog = searchEnv().catalog;
@@ -28,9 +28,11 @@ const gqlCart = {
 function fakeShopify() {
   return async (_url: string | URL, init?: RequestInit) => {
     const body = JSON.parse(String(init?.body ?? "{}")) as { query?: string };
-    const payload = body.query?.includes("cartLinesAdd")
-      ? { cartLinesAdd: { cart: gqlCart, userErrors: [] } }
-      : { cartCreate: { cart: gqlCart, userErrors: [] } };
+    const payload = body.query?.includes("cartLinesRemove")
+      ? { cartLinesRemove: { cart: { ...gqlCart, lines: { nodes: [] } }, userErrors: [] } }
+      : body.query?.includes("cartLinesAdd")
+        ? { cartLinesAdd: { cart: gqlCart, userErrors: [] } }
+        : { cartCreate: { cart: gqlCart, userErrors: [] } };
     return new Response(JSON.stringify({ data: payload }), {
       headers: { "Content-Type": "application/json" },
     });
@@ -98,11 +100,15 @@ test("shopper: search → refine → add; checkout is a URL; keys never in the t
 
   const add = await heuristicTurn(session, "Add the second one", env);
   assert.equal(add.tools[0].name, "add_to_cart");
-  assert.equal(add.cart?.checkout_url, "https://demostore.mock.shop/checkout");
+  assert.match(add.cart?.checkout_url ?? "", /\/cart\/1:1$/);
   assert.ok(add.cart && !("complete_checkout" in add.cart));
   const blob = JSON.stringify(add);
   assert.equal(blob.includes("shp_secret"), false);
   assert.equal(blob.includes("OPENAI"), false);
+
+  const gone = await runRemove(session, add.cart.lines[0].id, env);
+  assert.equal(session.cart, null);
+  assert.match(gone.reply, /empty/i);
 });
 
 test("add without a variant id hands off to the product URL", async () => {
@@ -121,4 +127,11 @@ test("add without a variant id hands off to the product URL", async () => {
   });
   assert.match(out.reply, /no Shopify variant/i);
   assert.equal(session.cart, null);
+});
+
+test("mock.shop checkout URL becomes a cart permalink", () => {
+  const url = storefrontHandoffUrl("https://demostore.mock.shop/checkout", [
+    { id: "l1", quantity: 1, variant_id: "gid://shopify/ProductVariant/43696903847958", title: "Hoodie" },
+  ]);
+  assert.equal(url, "https://demostore.mock.shop/cart/43696903847958:1");
 });

@@ -1,4 +1,4 @@
-import { addVariantToCart, type ShopifyEnv } from "./shopify-cart.ts";
+import { addVariantToCart, removeLineFromCart, type ShopifyEnv } from "./shopify-cart.ts";
 import { searchProducts, type SearchEnv } from "./suggestapi.ts";
 import type { Cart, Product, ShopperTurn, ToolCall } from "./types.ts";
 
@@ -74,7 +74,7 @@ export async function runAdd(
 ): Promise<{ reply: string }> {
   const product = session.products[index];
   if (!product) {
-    return { reply: "There isn’t a product in that position. Search first, then add by number." };
+    return { reply: "There isn’t a product in that position." };
   }
   const variant = product.extra.shopify_variant_id;
   if (!variant) {
@@ -86,6 +86,17 @@ export async function runAdd(
   return {
     reply: `Added ${product.title}. Checkout stays on Shopify — use the checkout button. This agent never takes payment.`,
   };
+}
+
+export async function runRemove(
+  session: Session,
+  lineId: string,
+  env: { shopify: ShopifyEnv },
+): Promise<{ reply: string }> {
+  if (!session.cart?.id) return { reply: "Cart is empty." };
+  const next = await removeLineFromCart(lineId, session.cart.id, env.shopify);
+  session.cart = next.lines.length ? next : null;
+  return { reply: session.cart ? "Removed from cart." : "Cart is empty." };
 }
 
 export async function heuristicTurn(
