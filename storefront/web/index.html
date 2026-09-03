@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SuggestAPI shopper</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header>
+      <div>
+        <p class="eyebrow">SuggestAPI for Commerce</p>
+        <h1>Shopper agent</h1>
+      </div>
+      <p class="lede">
+        SuggestAPI is retrieval. Shopify Storefront is the cart. Checkout stays on the store.
+      </p>
+    </header>
+    <main>
+      <section class="chat" aria-label="Shopper">
+        <ol id="log"></ol>
+        <form id="form">
+          <input
+            id="input"
+            name="message"
+            autocomplete="off"
+            placeholder="I need a hoodie under $100"
+          />
+          <button type="submit">Send</button>
+        </form>
+        <p class="hints">
+          Try: <button type="button" data-q="I need a hoodie under $100">hoodie under $100</button>
+          <button type="button" data-q="Show only cotton">Show only cotton</button>
+          <button type="button" data-q="Add the second one">Add the second one</button>
+        </p>
+      </section>
+      <section class="rail">
+        <div>
+          <h2>Results</h2>
+          <p id="meta" class="muted"></p>
+          <ul id="grid"></ul>
+        </div>
+        <div>
+          <h2>Cart</h2>
+          <ul id="cart"></ul>
+          <a id="checkout" class="checkout" hidden href="#" target="_blank" rel="noreferrer">
+            Checkout on Shopify
+          </a>
+        </div>
+      </section>
+    </main>
+    <script src="/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,287 @@
+{
+  "recorded_at": "2026-09-03T00:00:00.000Z",
+  "source": "https://mock.shop/api",
+  "note": "Guest catalog in SuggestAPI suggestion shape. Live SUGGESTAPI_PUBLIC_KEY bypasses this file.",
+  "catalog": [
+    {
+      "id": "slides",
+      "title": "Slides",
+      "desc": "Simple, minimal and comfortable, these slides feature a classic design in the perfect shade of iron. Whether you're just lounging around the house or running errands, these slides will offer all-day comfort.",
+      "url": "https://mock.shop/products/slides",
+      "image_url": "https://cdn.shopify.com/mock-shop-production-media/_seeds/demostore/2b6e548b7deeed36367218be099c91d2366145fdac845fa32455c6ee502cdaea.jpg",
+      "price": 25,
+      "currency": "CAD",
+      "extra": {
+        "shopify_product_id": "gid://shopify/Product/7982853619734",
+        "shopify_variant_id": "gid://shopify/ProductVariant/43695710371862",
+        "handle": "slides"
+      }
+    },
+    {
+      "id": "sweatpants",
+      "title": "Sweatpants",
+      "desc": "Soft and comfortable sweatpants in stylish shades. They are perfect for lounging with their cozy stretch fabric that offers just the right amount of warmth. Enjoy the ultimate relaxation experience!",
+      "url": "https://mock.shop/products/sweatpants",
+      "image_url": "https://cdn.shopify.com/mock-shop-production-media/_seeds/demostore/e4fe192f0e86ffc74d3b906f754119d4b5f4432cf01120d090ab7eb5182e8897.jpg",
+      "price": 35,
+      "currency": "CAD",
+      "extra": {
+        "shopify_product_id": "gid://shopify/Product/7982856273942",
+        "shopify_variant_id": "gid://shopify/ProductVariant/43696926949398",
+        "handle": "sweatpants"
+      }
+    },
+    {
+      "id": "men-t-shirt",
+      "title": "Men's T-shirt",
+      "desc": "Crafted from organic cotton, this classic T-shirt features a relaxed fit, crew neckline and timeless look. Enjoy the breathable comfort of 100% organic cotton.",
+      "url": "https://mock.shop/products/men-t-shirt",
+      "image_url": "https://cdn.shopify.com/mock-shop-production-media/_seeds/demostore/c99af4de567f8baafab47fa2d5267d83a997f9082892f01d7145c0eaa5403832.jpg",
+      "price": 40,
+      "currency": "CAD",
+      "extra": {
+        "shopify_product_id": "gid://shopify/Product/7982902771734",
+        "shopify_variant_id": "gid://shopify/ProductVariant/43696932126742",
+        "handle": "men-t-shirt"
+      }
+    },
+    {
+      "id": "hoodie-old",
+      "title": "Hoodie",
+      "desc": "This hoodie is the perfect choice for comfort and warmth. Meticulously crafted from 100% cotton, the hoodie features a soft, plush fleece interior and a unisex sizing design. Soft and lightweight, it's sure to be your go-to for chilly days.",
+      "url": "https://mock.shop/products/hoodie-old",
+      "image_url": "https://cdn.shopify.com/mock-shop-production-media/_seeds/demostore/3d4d46da1bdbda2bf52f92987e6d4108770eb0a8f233f63a279849fce731f5af.jpg",
+      "price": 90,
+      "currency": "CAD",
+      "extra": {
+        "shopify_product_id": "gid://shopify/Product/7982904639510",
+        "shopify_variant_id": "gid://shopify/ProductVariant/43696903847958",
+        "handle": "hoodie-old"
+      }
+    },
+    {
+      "id": "soft-cotton-hoodie-in-jam",
+      "title": "Soft Cotton Hoodie in Jam",
+      "desc": "This hoodie is the perfect choice for comfort and warmth. Meticulously crafted from 100% cotton, the hoodie features a soft, plush fleece interior and a unisex sizing design. Soft and lightweight, it's sure to be your go-to for chilly days.",
+      "url": "https://mock.shop/products/soft-cotton-hoodie-in-jam",
+      "image_url": "https://cdn.shopify.com/mock-shop-production-media/_seeds/demostore/d0d11d66a08324cfd45030ac274df2cf84d2006e14ee29dc6c32d16b4be8b9e4.jpg",
+      "price": 90,
+      "currency": "CAD",
+      "extra": {
+        "shopify_product_id": "gid://shopify/Product/7982904705046",
+        "shopify_variant_id": "gid://shopify/ProductVariant/43695846621206",
+        "handle": "soft-cotton-hoodie-in-jam"
+      }
+    },
+    {
+      "id": "soft-cotton-hoodie-in-clay",
+      "title": "Soft Cotton Hoodie in Clay",
+      "desc": "This hoodie is the perfect choice for comfort and warmth. Meticulously crafted from 100% cotton, the hoodie features a soft, plush fleece interior and a unisex sizing design. Soft and lightweight, it's sure to be your go-to for chilly days.",
+      "url": "https://mock.shop/products/soft-cotton-hoodie-in-clay",
+      "image_url": "https://cdn.shopify.com/mock-shop-production-media/_seeds/demostore/f68a0d349c21e1fe5e33597cc4e6f98f60d7e92151a1c09747597d56e83707ef.jpg",
+      "price": 90,
+      "currency": "CAD",
+      "extra": {
+        "shopify_product_id": "gid://shopify/Product/7982904836118",
+        "shopify_variant_id": "gid://shopify/ProductVariant/43695847145494",
+        "handle": "soft-cotton-hoodie-in-clay"
+      }
+    },
+    {
+      "id": "soft-cotton-hoodie-in-ocean",
+      "title": "Soft Cotton Hoodie in Ocean",
+      "desc": "This hoodie is the perfect choice for comfort and warmth. Meticulously crafted from 100% cotton, the hoodie features a soft, plush fleece interior and a unisex sizing design. Soft and lightweight, it's sure to be your go-to for chilly days.",
+      "url": "https://mock.shop/products/soft-cotton-hoodie-in-ocean",
+      "image_url": "https://cdn.shopify.com/mock-shop-production-media/_seeds/demostore/24a9b0cb7f9bdd0ffd858cd2c6f588a15923c8456e0d975ed7a0fc9382a4dabf.jpg",
+      "price": 90,
+      "currency": "CAD",
+      "extra": {
+        "shopify_product_id": "gid://shopify/Product/7982904868886",
+        "shopify_variant_id": "gid://shopify/ProductVariant/43695847276566",
+        "handle": "soft-cotton-hoodie-in-ocean"
+      }
+    },
+    {
+      "id": "soft-cotton-hoodie-in-violet",
+      "title": "Soft Cotton Hoodie in Violet",
+      "desc": "This hoodie is the perfect choice for comfort and warmth. Meticulously crafted from 100% cotton, the hoodie features a soft, plush fleece interior and a unisex sizing design. Soft and lightweight, it's sure to be your go-to for chilly days.",
+      "url": "https://mock.shop/products/soft-cotton-hoodie-in-violet",
+      "image_url": "https://cdn.shopify.com/mock-shop-production-media/_seeds/demostore/c914b503fa965192c1b48ba70285736f8ff2c7482992ce17cda3a8bfb343a1c9.jpg",
+      "price": 90,
+      "currency": "CAD",
+      "extra": {
+        "shopify_product_id": "gid://shopify/Product/7982904901654",
+        "shopify_variant_id": "gid://shopify/ProductVariant/43695847407638",
+        "handle": "soft-cotton-hoodie-in-violet"
+      }
+    },
+    {
+      "id": "soft-cotton-hoodie-in-green",
+      "title": "Soft Cotton Hoodie in Green",
+      "desc": "This hoodie is the perfect choice for comfort and warmth. Meticulously crafted from 100% cotton, the hoodie features a soft, plush fleece interior and a unisex sizing design. Soft and lightweight, it's sure to be your go-to for chilly days.",
+      "url": "https://mock.shop/products/soft-cotton-hoodie-in-green",
+      "image_url": "https://cdn.shopify.com/mock-shop-production-media/_seeds/demostore/0f65745f05a1549a7f5eff876fce0351bc1899e9fa304e5f6db014179269de9b.png",
+      "price": 90,
+      "currency": "CAD",
+      "extra": {
+        "shopify_product_id": "gid://shopify/Product/7982904934422",
+        "shopify_variant_id": "gid://shopify/ProductVariant/43695847538710",
+        "handle": "soft-cotton-hoodie-in-green"
+      }
+    },
+    {
+      "id": "men-crewneck",
+      "title": "Men's Crewneck",
+      "desc": "This high-quality crewneck is perfect for your everyday look. Made with 100% cotton, it's soft, comfortable, and undeniably stylish. Full sleeved for a classic look and effortlessly versatile, this cotton crewneck is a must-have in any wardrobe.",
+      "url": "https://mock.shop/products/men-crewneck",
+      "image_url": "https://cdn.shopify.com/mock-shop-production-media/_seeds/demostore/4ecbbab490d5a90c04074428b4b0e09358c6895050db590ffbb84e1f8e05fbbc.jpg",
+      "price": 120,
+      "currency": "CAD",
+      "extra": {
+        "shopify_product_id": "gid://shopify/Product/7982905098262",
+        "shopify_variant_id": "gid://shopify/ProductVariant/43696905224214",
+        "handle": "men-crewneck"
+      }
+    },
+    {
+      "id": "women-crewneck",
+      "title": "Women's Crewneck",
+      "desc": "This high-quality crewneck is perfect for your everyday look. Made with 100% cotton, it's soft, comfortable, and undeniably stylish. Full sleeved for a classic look and effortlessly versatile, this cotton crewneck is a must-have in any wardrobe.",
+      "url": "https://mock.shop/products/women-crewneck",
+      "image_url": "https://cdn.shopify.com/mock-shop-production-media/_seeds/demostore/085e04f1a4d35f4558b5f63769e26716b4d2be95bab0bee52d1f6a85d97d4f31.jpg",
+      "price": 120,
+      "currency": "CAD",
+      "extra": {
+        "shopify_product_id": "gid://shopify/Product/7983591030806",
+        "shopify_variant_id": "gid://shopify/ProductVariant/43696906207254",
+        "handle": "women-crewneck"
+      }
+    },
+    {
+      "id": "women-t-shirt",
+      "title": "Women's T-shirt",
+      "desc": "Crafted from organic cotton, this classic T-shirt features a relaxed fit, crew neckline and timeless look. Enjoy the breathable comfort of 100% organic cotton.",
+      "url": "https://mock.shop/products/women-t-shirt",
+      "image_url": "https://cdn.shopify.com/mock-shop-production-media/_seeds/demostore/313a2bf49d67db5a50828cfac7f1466cba32f48bbb0223148ecaeb8fe5e157d6.jpg",
+      "price": 40,
+      "currency": "CAD",
+      "extra": {
+        "shopify_product_id": "gid://shopify/Product/7983592374294",
+        "shopify_variant_id": "gid://shopify/ProductVariant/43696933273622",
+        "handle": "women-t-shirt"
+      }
+    },
+    {
+      "id": "canvas-sneakers",
+      "title": "Canvas Sneakers",
+      "desc": "These high-quality canvas sneakers offer a comfortable fit and superior breathability, thanks to their cushioning midsoles and durable construction. An array of stylish colors adds to the appeal, making them perfect for casual wear. Slip them on and enjoy reliable performance and style that lasts.",
+      "url": "https://mock.shop/products/canvas-sneakers",
+      "image_url": "https://cdn.shopify.com/mock-shop-production-media/_seeds/demostore/4e6a1c46ff8e481db3972a6c2e816e878ab78acf2d6593ca9cf8ac9d5a344b3a.jpg",
+      "price": 40,
+      "currency": "CAD",
+      "extra": {
+        "shopify_product_id": "gid://shopify/Product/7983593095190",
+        "shopify_variant_id": "gid://shopify/ProductVariant/43696935272470",
+        "handle": "canvas-sneakers"
+      }
+    },
+    {
+      "id": "frontpack",
+      "title": "Frontpack",
+      "desc": "This frontpack is the perfect combination of form and function, with a modern, sporty design and patented technology that enables you to easily carry numerous items on the go. It's light, comfortable and has adjustable straps to fit all body types. Plus, its water-resistant outer shell ensures your items stay dry and secure.",
+      "url": "https://mock.shop/products/frontpack",
+      "image_url": "https://cdn.shopify.com/mock-shop-production-media/_seeds/demostore/9a91ba812237969c5b8c51d586ac4206548f27d88756ac96619790c461eb988c.jpg",
+      "price": 200,
+      "currency": "CAD",
+      "extra": {
+        "shopify_product_id": "gid://shopify/Product/7983593357334",
+        "shopify_variant_id": "gid://shopify/ProductVariant/43696935600150",
+        "handle": "frontpack"
+      }
+    },
+    {
+      "id": "half-zip",
+      "title": "Half Zip",
+      "desc": "This half zip athletic sweatshirt is designed for optimum comfort and convenience. The half zip provides easy access to slip on and off, and the lightweight fabric is breathable and flexible, ideal for active pursuits. Perfect for athletes of all levels.",
+      "url": "https://mock.shop/products/half-zip",
+      "image_url": "https://cdn.shopify.com/mock-shop-production-media/_seeds/demostore/9e803ec74aad4ea090069ff99a4b82b78a023a76b84e53b457632b624166e67d.jpg",
+      "price": 100,
+      "currency": "CAD",
+      "extra": {
+        "shopify_product_id": "gid://shopify/Product/7983593390102",
+        "shopify_variant_id": "gid://shopify/ProductVariant/43696935763990",
+        "handle": "half-zip"
+      }
+    },
+    {
+      "id": "leggings",
+      "title": "Leggings",
+      "desc": "These sporty and lightweight leggings are designed for comfort and ease of movement. Its moisture-wicking fabric and strong seams keep you feeling cool and secure. Available in an array of colors, these leggings are an ideal choice to look stylish while exercising.",
+      "url": "https://mock.shop/products/leggings",
+      "image_url": "https://cdn.shopify.com/mock-shop-production-media/_seeds/demostore/36b42e474080383395e8126a08daafcfcfe2509d2b4b6855f376350ba71b9233.jpg",
+      "price": 20,
+      "currency": "CAD",
+      "extra": {
+        "shopify_product_id": "gid://shopify/Product/7983593422870",
+        "shopify_variant_id": "gid://shopify/ProductVariant/43696935927830",
+        "handle": "leggings"
+      }
+    },
+    {
+      "id": "light-puffer",
+      "title": "Light Puffer",
+      "desc": "This light puffer vest is made from durable nylon and will keep you dry and comfortable in all weather. Its light coating provides reliable protection from wind and rain, and its versatile fit offers maximum mobility. Perfect for moderate temperatures and varied conditions.",
+      "url": "https://mock.shop/products/light-puffer",
+      "image_url": "https://cdn.shopify.com/mock-shop-production-media/_seeds/demostore/953af70df34acb1ef64da0bdd5545f66362ee2579ed8faf78ad04b723066caec.jpg",
+      "price": 80,
+      "currency": "CAD",
+      "extra": {
+        "shopify_product_id": "gid://shopify/Product/7983593947158",
+        "shopify_variant_id": "gid://shopify/ProductVariant/43696936583190",
+        "handle": "light-puffer"
+      }
+    },
+    {
+      "id": "puffer",
+      "title": "Puffer",
+      "desc": "This light puffer vest is made from durable nylon and will keep you dry and comfortable in all weather. Its light coating provides reliable protection from wind and rain, and its versatile fit offers maximum mobility. Perfect for moderate temperatures and varied conditions.",
+      "url": "https://mock.shop/products/puffer",
+      "image_url": "https://cdn.shopify.com/mock-shop-production-media/_seeds/demostore/20834f7f1039586bb547d0f28f94c37a2be2976705274de37ac424539c9046dd.jpg",
+      "price": 80,
+      "currency": "CAD",
+      "extra": {
+        "shopify_product_id": "gid://shopify/Product/7983594176534",
+        "shopify_variant_id": "gid://shopify/ProductVariant/43696936943638",
+        "handle": "puffer"
+      }
+    },
+    {
+      "id": "puffer-jacket",
+      "title": "Puffer Jacket",
+      "desc": "This light puffer jacket is made from durable nylon and will keep you dry and comfortable in all weather. Its light coating provides reliable protection from wind and rain, and its versatile fit offers maximum mobility. Perfect for moderate temperatures and varied conditions.",
+      "url": "https://mock.shop/products/puffer-jacket",
+      "image_url": "https://cdn.shopify.com/mock-shop-production-media/_seeds/demostore/d0d927ae26c636dae24fae128e1b424ccd5ea76c9a921ac293389f70a688a9dc.jpg",
+      "price": 90,
+      "currency": "CAD",
+      "extra": {
+        "shopify_product_id": "gid://shopify/Product/7983594340374",
+        "shopify_variant_id": "gid://shopify/ProductVariant/43696937238550",
+        "handle": "puffer-jacket"
+      }
+    },
+    {
+      "id": "shorts",
+      "title": "Shorts",
+      "desc": "These shorts are designed to help you reach peak performance. Constructed with high performance nylon fabric in a variety of shades, they are built to last and provide maximum comfort.",
+      "url": "https://mock.shop/products/shorts",
+      "image_url": "https://cdn.shopify.com/mock-shop-production-media/_seeds/demostore/631607a39677fdc2ff99f21a55560629e49e5c5e15c1212c4e9186fa995cb65d.jpg",
+      "price": 45,
+      "currency": "CAD",
+      "extra": {
+        "shopify_product_id": "gid://shopify/Product/7983594471446",
+        "shopify_variant_id": "gid://shopify/ProductVariant/43696937500694",
+        "handle": "shorts"
+      }
+    }
+  ]
+}
